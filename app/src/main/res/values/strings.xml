@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Mini_Project</string>
+    <string-array name="clg_year">
+        <item>Select</item>
+        <item>I year</item>
+        <item>II year</item>
+        <item>III year</item>
+        <item>IV year</item>
+    </string-array>
+
+    <string-array name="clg_dept">
+        <item>Select</item>
+        <item>CSE</item>
+        <item>ECE</item>
+        <item>CIVIL</item>
+        <item>MECH</item>
+        <item>IT</item>
+        <item>EEE</item>
+    </string-array>
+
+</resources>
