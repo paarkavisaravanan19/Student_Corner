@@ -35,7 +35,8 @@ public class MainActivity extends AppCompatActivity {
         log.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(TextUtils.isEmpty(roll.getText()) && TextUtils.isEmpty(bday.getText()) && sp.getSelectedItemPosition()==1 && sp1.getSelectedItemPosition()==1) {
+                if(TextUtils.isEmpty(roll.getText()) && TextUtils.isEmpty(bday.getText())) {
+
                     Toast.makeText(MainActivity.this, "Enter all credentials", Toast.LENGTH_SHORT).show();
                 }
                 else {
