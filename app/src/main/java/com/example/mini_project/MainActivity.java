@@ -5,10 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        EditText roll=findViewById(R.id.rollno);
+        EditText bday=findViewById(R.id.dob);
         Spinner sp=findViewById(R.id.year);
         ArrayAdapter<CharSequence> adapter=ArrayAdapter.createFromResource(this,R.array.clg_year,android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
@@ -30,8 +35,13 @@ public class MainActivity extends AppCompatActivity {
         log.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i=new Intent(MainActivity.this,MainActivity2.class);
-                startActivityForResult(i,0);
+                if(TextUtils.isEmpty(roll.getText()) && TextUtils.isEmpty(bday.getText()) && sp.getSelectedItemPosition()==1 && sp1.getSelectedItemPosition()==1) {
+                    Toast.makeText(MainActivity.this, "Enter all credentials", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Intent i = new Intent(MainActivity.this, MainActivity2.class);
+                    startActivityForResult(i, 0);
+                }
             }
         });
     }

@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/HARSHINI/AndroidStudioProjects/Mini_Project/app/src/main/res/layout/activity_cgpa_calculator.xml" value="0.25" />
         <entry key="..\:/Users/HARSHINI/AndroidStudioProjects/Mini_Project/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/HARSHINI/AndroidStudioProjects/Mini_Project/app/src/main/res/layout/activity_main2.xml" value="0.25" />
         <entry key="..\:/Users/HARSHINI/AndroidStudioProjects/Mini_Project/app/src/main/res/layout/activity_main3.xml" value="0.264" />
@@ -11,10 +12,6 @@
         <entry key="..\:/Users/HARSHINI/AndroidStudioProjects/Mini_Project/app/src/main/res/layout/activity_main6.xml" value="0.25" />
         <entry key="..\:/Users/HARSHINI/AndroidStudioProjects/Mini_Project/app/src/main/res/layout/activity_main7.xml" value="0.25" />
         <entry key="..\:/Users/HARSHINI/AndroidStudioProjects/Mini_Project/app/src/main/res/layout/video_cse.xml" value="0.25" />
-        <entry key="..\:/Users/welcom/AndroidStudioProjects/Student Corner/app/src/main/res/layout/activity_cgpa_calculator.xml" value="0.17074275362318841" />
-        <entry key="..\:/Users/welcom/AndroidStudioProjects/Student Corner/app/src/main/res/layout/activity_main.xml" value="0.17074275362318841" />
-        <entry key="..\:/Users/welcom/AndroidStudioProjects/Student Corner/app/src/main/res/layout/activity_main3.xml" value="0.17074275362318841" />
-        <entry key="..\:/Users/welcom/AndroidStudioProjects/Student Corner/app/src/main/res/layout/activity_main4.xml" value="0.17074275362318841" />
       </map>
     </option>
   </component>
