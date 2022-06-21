@@ -13,6 +13,9 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -31,17 +34,31 @@ public class MainActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
         sp1.setAdapter(adapter1);
 
+        Pattern p=Pattern.compile("^([0-9]{2})(^[a-z]{2,3})(^[0-9]{3})$");
+        Matcher m=p.matcher(roll.getText().toString());
+
+        Pattern p1=Pattern.compile("^(0[1-9]|1[012])[-/.](0[1-9]|[12][0-9]|3[01])[-/.](19|20)\\d\\d$" );
+        Matcher m1=p1.matcher(bday.getText().toString());
         Button log=findViewById(R.id.login);
         log.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(TextUtils.isEmpty(roll.getText()) && TextUtils.isEmpty(bday.getText())) {
-
-                    Toast.makeText(MainActivity.this, "Enter all credentials", Toast.LENGTH_SHORT).show();
+                if(!TextUtils.isEmpty(roll.getText()) || !TextUtils.isEmpty(bday.getText()) || sp.getSelectedItemPosition()!=0 || sp1.getSelectedItemPosition()!=0) {
+                    if (roll.getText().toString().length() == 8 || m.find()) {
+                        if(bday.getText().toString().length()==10) {
+                            Intent i = new Intent(MainActivity.this, MainActivity2.class);
+                            startActivityForResult(i, 0);
+                        }
+                        else {
+                            Toast.makeText(MainActivity.this, "Enter valid Date of birth", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                    else {
+                        Toast.makeText(MainActivity.this, "Enter valid roll number", Toast.LENGTH_SHORT).show();
+                    }
                 }
                 else {
-                    Intent i = new Intent(MainActivity.this, MainActivity2.class);
-                    startActivityForResult(i, 0);
+                    Toast.makeText(MainActivity.this, "Enter all credentials", Toast.LENGTH_SHORT).show();
                 }
             }
         });
